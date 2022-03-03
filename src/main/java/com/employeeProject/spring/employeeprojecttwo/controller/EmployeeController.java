@@ -29,7 +29,7 @@ public class EmployeeController {
 	
 	@GetMapping("/insert")
 	public String addEmployee(Model model) {
-		model.addAttribute("insert", new Employee(101,"gauri","ceo",420,19));
+		model.addAttribute("insert", new Employee());
 		return "createEmployee";
 	}
 	
@@ -47,6 +47,12 @@ public class EmployeeController {
 	@GetMapping("/remove")
 	public String removeEmployee() {
 		return "DeleteEmployee";
+	}
+	
+	@GetMapping("/display")
+	public String displayEmployee(Model model) {
+		model.addAttribute("insert", employeeRepository.findAll());
+		return "UpdateEmployee";
 	}
 	
 }

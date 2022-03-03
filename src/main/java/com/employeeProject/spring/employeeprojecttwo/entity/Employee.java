@@ -8,10 +8,6 @@ import javax.persistence.Id;
 public class Employee {
 	
 	
-		public Employee() {
-			
-		}
-	
 		@Id
 		@GeneratedValue
 		private int id;
@@ -20,13 +16,13 @@ public class Employee {
 		private int salary;
 		private int age;
 		
-		public Employee(int id, String name, String designation, int salary, int age) {
-			this.id = id;
-			this.name = name;
-			this.designation = designation;
-			this.salary = salary;
-			this.age = age;
-		}
+//		public Employee(int id, String name, String designation, int salary, int age) {
+//			this.id = id;
+//			this.name = name;
+//			this.designation = designation;
+//			this.salary = salary;
+//			this.age = age;
+//		}
 
 		public String getName() {
 			return name;
