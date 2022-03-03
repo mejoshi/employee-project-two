@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Employee {
 	
 	
-		protected Employee() {
+		public Employee() {
 			
 		}
 	
