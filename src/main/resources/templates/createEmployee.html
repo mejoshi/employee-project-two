@@ -2,59 +2,59 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Create Employee</title>
+<link href="style.css">
+<link rel="stylesheet" href="../index.css">
+
 </head>
 <body>
-	<form action="#" th:action="@{/insert}" th:object="${employee}" method="post">
-			<h1 id="addEmployee">Add Employee</h1>
-		
+	<form action="#" th:action="@{/savedEmployee}" th:object="${employee}"
+		method="post">
+		<h1 class="heading" id="addEmployee">Add Employee</h1>
+
 		<table>
+		
 			<tr>
-				<td>ID : </td>
-				<td><input type="text" field="*{id}"/>
+				<td>ID :</td>
+				<td><input th:field="*{id}" placeholder="ID"
+					type="text"></td>
+			</tr>
+		
+			<tr>
+				<td>Name :</td>
+				<td><input th:field="*{name}" placeholder="First Name"
+					type="text"></td>
+			</tr>
+
+
+			<tr>
+				<td>Salary :</td>
+				<td><input th:field="*{salary}" placeholder="Salary" type="text">
 				</td>
 			</tr>
-			
+
 			<tr>
-				<td>First Name :</td>
-				<td>			<input name="firstname" placeholder="First Name" type="text" >
+				<td>Designation :</td>
+				<td><input th:field="*{designation}" placeholder="Designation"
+					type="text"></td>
+			</tr>
+
+			<tr>
+				<td>Age :</td>
+				<td><input th:field="*{age}" placeholder="Age" type="text">
 				</td>
 			</tr>
-			
-			<tr>
-				<td>Last Name : </td>
-				<td>			<input name="lastname" placeholder="Last Name" type="text">
-				</td>
-			</tr>
-			
-			<tr>
-				<td>Salary : </td>
-				<td>			<input name="sal" placeholder="Salary" type="text">
-				</td>
-			</tr>
-			
-			<tr>
-				<td>Designation : </td>
-				<td>			<input name="designation" placeholder="Designation" type="text">
-				</td>
-			</tr>
-			
-			<tr>
-				<td>Age : </td>
-				<td>			<input name="age" placeholder="Age" type="text">
-				</td>
-			</tr>
-			
+
 			<tr>
 				<td></td>
-				<td>			<input type="submit" value="submit" class="btn btn-success">
+				<td><input type="submit" value="submit" class="btn btn-success">
 				</td>
 			</tr>
 		</table>
-		
-			
-		
-		
-		</form>
+
+
+
+
+	</form>
 </body>
 </html>

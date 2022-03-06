@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -29,14 +29,13 @@
 	</nav>
 
 	<div class="container">
-		<h1 style="margin-top: 30px;">Delete Employee</h1>
-		<form action="#" th:action="@{/deletedEmployee}"
-			 th:object="${employee}" method="post">
+		<h1 style="margin-top:30px;">Delete Employee</h1>
+		<form action="DeleteEmployee.jsp">
 
 			<table>
 				<tr>
 					<td>ID :</td>
-					<td><input th:field=*{name} placeholder="ID" type="text"></td>
+					<td><input name="id" placeholder="ID" type="text"></td>
 
 				</tr>
 

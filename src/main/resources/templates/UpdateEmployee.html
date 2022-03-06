@@ -4,18 +4,50 @@
 <meta charset="UTF-8">
 <title>Update Employee</title>
 <link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<form action="#" th:action="@{/savedEmployee}" th:object="${employee}"
+		method="post">
+		<h1 id="addEmployee">Add Employee</h1>
 
-	<table border="1" class = "table table-striped table-responsive-md">
-				<tr th:each="employee : ${listEmployees}">
-					<td th:text="${employee.id}"></td>
-					<td th:text="${employee.name}"></td>
-					<td th:text="${employee.sal}"></td>
-				</tr>
-			</tbody>
+		<table>
+			<tr>
+				<td>Name :</td>
+				<td><input th:field="*{name}" placeholder="First Name"
+					type="text"></td>
+			</tr>
+
+
+			<tr>
+				<td>Salary :</td>
+				<td><input th:field="*{salary}" placeholder="Salary" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Designation :</td>
+				<td><input th:field="*{designation}" placeholder="Designation"
+					type="text"></td>
+			</tr>
+
+			<tr>
+				<td>Age :</td>
+				<td><input th:field="*{age}" placeholder="Age" type="text">
+				</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" value="submit" class="btn btn-success">
+				</td>
+			</tr>
 		</table>
+
+
+
+
+	</form>
 
 </body>
 </html>
